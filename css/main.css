@@ -1,0 +1,262 @@
+:root{
+    --body-color: #189BCC;
+    --page-color:#BECC41;
+    --sidebar-color:#FFD700;
+    --red-color:#EA213A;
+    --orange-color:#FFA500;
+
+    --font-color: 	#0D0D0D;
+    --page-top-position: 85%;
+    --page-width: 30%;
+    --bottom-bar-height: 15%;
+    --bottom-bar-color: #FFD700;
+}
+
+body{
+    background-color: var(--body-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+    color: var(--font-color)
+}
+#zen-supporting{
+    background-color:var(--red-color)
+}
+#zen-philosophy{
+    background-color: var(--sidebar-color)
+}
+#zen-resources{
+    background-color: var(--orange-color)
+}
+#zen-supporting h2{
+    color: #FFD700;
+}
+#zen-philosophy h2{
+    color: #FFD700;
+}
+.sidebar{
+    background-color: #FFD700;
+}
+
+div.explanation, div.requirements, div.benefits, div.participation{
+    position:fixed;
+    width: var(--page-width);
+    top: var(--page-top-position);
+    background-image: url(../img/newspaper3.jpg);
+    transition: all 1s ease-in-out
+}
+
+div.explanation{
+    left:20%;
+}
+
+
+div.requirements{
+    position:fixed;
+    left:  40%;
+}
+
+div.benefits{
+    position:fixed;
+    left: 60%;
+}
+
+aside.sidebar{
+    position: absolute;
+    top:10%;
+    right: 0%;
+    bottom:0%;
+}
+
+section.intro{
+    position:fixed;
+    bottom:5%;
+    left: 30%;
+    width: 30%;
+    height:80%;
+    background-image: url(../img/newspaper3.jpg);
+    padding:2px;
+    border: 2px dashed rgb(39, 34, 34);
+    margin-left: 10px;
+    z-index: -1;
+    transform: rotate(15deg) translate(200px, -100px);
+}
+
+
+
+
+div.extra2{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: var(--bottom-bar-height);
+    background-color: var(--bottom-bar-color)
+}
+
+div.extra1{
+    position:fixed;
+    bottom:5%;
+    left: 20%;
+    width: 30%;
+    height:80%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+    transform: rotate(-15deg) translate(-150px,-100px);
+}
+
+/*create tabs for the folder*/
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    margin-top: -5%;
+    width: 8vw;
+    background-color: aqua;
+}
+
+
+@font-face {
+    font-family: "Zen";
+    src: url(../fonts/chunkfive.eot);
+}
+
+header h1{
+    font-family: "Zen",comic sans ms;
+    font-size: 2em;
+    font-weight: 100;
+    color: #000000;
+    letter-spacing: normal;
+    line-height: 1em;   
+}
+
+header h2{
+    font-family: 'Roboto', cursive;
+}
+
+a{
+    color: #189BCC;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+#design-selection h3{
+    visibility: hidden;
+}
+
+#design-archives{
+    visibility: hidden;
+}
+
+#zen-resources{
+    visibility: hidden;
+}
+
+
+a:hover{
+    font-size: 1.5em;
+}
+
+div.explanation:active{
+    top:15vh;
+    height:90vh;
+}
+
+div.requirements:active{
+    top:15vh;
+    height:90vh;
+}
+div.participation:active{
+    top:15vh;
+    height:90vh;
+}
+div.benefits:active{
+    top:15vh;
+    height:90vh;
+}
+
+p::first-letter{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+p:nth-child(2n){
+background-color:blueviolet;
+border-radius: 10px 100px / 120px;
+}
+
+p:nth-child(2n+1){
+background-color:antiquewhite;
+border-radius: 10px 100px / 120px;
+}
+li:first-of-type(2n){
+    font: 100;
+}
+
+h3 {color: white; text-shadow: black 0.1em 0.1em 0.2em}
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    border-radius: 25% 10%;
+    padding-left: 5px;
+}
+ul{
+    list-style-image: url(../img/star.png);
+}
+
+section.intro  h3:hover ~p{
+    opacity: 1;
+    transition: all 3s ease-in-out;
+}
+
+section.intro h3:hover~p{
+    transform: scale(0.2);
+    opacity: 0;
+}
+
+@keyframes backandforth{
+    from{transform: translate(-500px,0);}
+    30%{transform: translate(-300px,0);}
+    50%{transform: translate(300px,0);}
+    70%{transform: translate(500px,0);}
+    90%{transform: translate(700px,0);}
+}
+
+footer{
+    position: fixed;
+    bottom: 1vh;
+    left: 50%;
+    animation: 10s ease-in-out 2s alternate infinite backandforth;
+}
+
+aside.sidebar{
+    clip-path: polygon(0 0,0 60%, 50% 90%, 100% 60%, 100% 0)
+}
+.one{
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  
+  .two{
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  
+  .three{
+    grid-column:1/2;
+    grid-row: 2/4;
+  }
+  
+  .four{
+    grid-column:4/4;
+    grid-row:1/3;
+  }
+  
+  .five{
+    grid-column: 1/4
+      ;
+    grid-row: 4/4;
+  }
+  .six{
+    grid-column:3/5;
+    grid-row:3/5
+    
+  }
+  
